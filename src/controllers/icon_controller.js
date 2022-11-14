@@ -11,19 +11,23 @@ export default class extends Controller {
   }
 
   play(event) {
-    console.log("playing sound");
+    // console.log("playing sound");
     var sound = new Howl({
       src: ['/src/songs/campfire.wav'],
-      autoplay: true,
       loop: true,
       volume: 0.5,
       onend: function() {
       console.log('looping!');
     }
     });
-
-    sound.volume(0.2);
-    sound.play();
+    sound.playing() ? sound.pause() : sound.play();
+    // if (sound.playing()) {
+    //   console.log("Paused sound");
+    //   sound.stop()
+    // } else {
+    //   console.log("Playing sound");
+    //   sound.play();
+    // }
   }
 
 

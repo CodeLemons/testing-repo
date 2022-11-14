@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+}
+
+.zoom-box {
+  border-radius: 50%;
+  transition: transform .2s;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+.zoom-box:hover {
+  transform: scale(1.15);
+}
+
+.zoom-box button {
+  background-color: #5e6569;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 21px;
+  height: 80px;
+  width: 80px;
+  box-shadow: 0 2px 4px darkslategrey;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
